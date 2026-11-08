@@ -13,17 +13,17 @@ export function Logo({
 }) {
   const src =
     variant === "dark"
-      ? "/brand/carpsync-primary-white-lime.svg"
-      : "/brand/carpsync-light-charcoal-lime.svg";
+      ? "/brand/carpsync-logo-lockup.png"
+      : "/brand/carpsync-logo-lockup-light.png";
 
   const image = (
     <Image
       src={src}
       alt="CarpSync"
-      width={160}
-      height={40}
+      width={972}
+      height={224}
       priority
-      className={cn("h-8 w-auto", className)}
+      className={cn("h-11 w-auto max-w-[70vw]", className)}
     />
   );
 

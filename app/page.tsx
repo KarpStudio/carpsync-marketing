@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Hero } from "@/components/home/hero";
 import { TrustStatement } from "@/components/home/trust-statement";
 import { FeaturesOverview } from "@/components/home/features-overview";
@@ -23,6 +24,17 @@ export const metadata = pageMetadata({
 export default function HomePage() {
   return (
     <>
+      <div className="bg-[#07110d]">
+        <Image
+          src="/brand/carpsync-hero-banner.jpg"
+          alt="CarpSync — carp lake booking system"
+          width={1024}
+          height={341}
+          priority
+          sizes="100vw"
+          className="h-auto w-full"
+        />
+      </div>
       <Hero />
       <TrustStatement />
       <FeaturesOverview />
