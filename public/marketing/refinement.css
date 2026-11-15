@@ -552,3 +552,45 @@ details>p { font-size:14px; color:#53654b; }
 .setup-finder,.enquiry-form{scroll-margin-top:18px}
 .setup-finder.is-complete>h3,.setup-finder.is-complete>.setup-intro{display:none}
 @media(max-width:760px){.detail-close{width:44px;height:44px}.setup-finder,.enquiry-form{scroll-margin-top:12px}}
+
+/* Managed fishery onboarding — standalone marketing pages */
+.application-price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0 0 38px}
+.application-price-card{padding:32px;border:1px solid #cfd8c5;background:#f8fbf3;border-radius:12px;display:flex;flex-direction:column;gap:16px}
+.application-price-card:nth-child(2){background:#eff4e8}
+.application-price-card h2{font-size:clamp(40px,5vw,56px);line-height:1.05;letter-spacing:-2px;color:#23451c}
+.application-price-card h2 small{font-size:17px;letter-spacing:0;font-weight:500}
+.application-price-card p:not(.eyebrow){font-size:13px;line-height:1.8;color:#435840}
+.application-price-card ul,.application-aside ul{list-style:none;display:grid;gap:10px;padding:0}
+.application-price-card li,.application-aside li{font-size:12px;color:#405738;line-height:1.7;padding-left:20px;position:relative}
+.application-price-card li:before,.application-aside li:before{content:"✓";position:absolute;left:0;color:#6c913f}
+.application-price-card .button{margin-top:auto;align-self:flex-start}
+.application-wrap{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(220px,0.85fr);gap:32px;margin:0 0 75px}
+.application-form-card{padding:clamp(22px,4vw,46px);background:#f6f9f1;border:1px solid #d1ddc7;border-radius:12px}
+.application-form-card>h2,.application-aside>h2{color:#254622;font-size:clamp(25px,3vw,34px);line-height:1.23;letter-spacing:-.8px;margin:10px 0 14px}
+.application-form-card>p:not(.eyebrow){color:#56664b;font-size:13px;line-height:1.8;margin-bottom:26px}
+.application-form{display:grid;gap:19px}
+.application-form label{display:flex;flex-direction:column;gap:8px;font-size:12px;font-weight:700;color:#2e482b;min-width:0}
+.application-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.application-form input:not([type=checkbox]),.application-form select,.application-form textarea{appearance:none;background:#fff;color:#203920;width:100%;min-height:46px;padding:11px 13px;border:1px solid #bbcbb4;border-radius:6px;font:inherit;font-size:15px}
+.application-form textarea{resize:vertical;min-height:105px}
+.application-form :is(input,select,textarea):focus-visible{outline:3px solid #9bca70;outline-offset:2px}
+.application-form .application-check{flex-direction:row;align-items:flex-start;font-weight:500;gap:12px;line-height:1.8}
+.application-form .application-check input{width:19px;height:19px;accent-color:#4d782f;flex-shrink:0;margin-top:2px}
+.application-consent,.application-quote{font-size:12px;line-height:1.8;color:#4c6145}
+.application-quote{background:#e5f0d7;border:1px solid #cbdcba;padding:12px 14px;border-radius:8px}
+.application-quote strong{color:#23431c}
+.application-consent a{text-decoration:underline;text-underline-offset:3px}
+.application-form .button{justify-content:center;min-height:52px}
+.application-form .button:disabled{opacity:.55;cursor:wait}
+.application-error{font-size:12px;color:#972e1c;background:#fff2ee;padding:12px;border:1px solid #eeaea0;border-radius:6px}
+.application-success{background:#eaf4df;padding:28px;border-radius:8px}
+.application-success h3{font-size:23px;color:#2c5622}
+.application-success p{font-size:13px;line-height:1.85;color:#426338;margin:12px 0}
+.application-aside{padding:36px 28px;border-radius:12px;background:#eaf0df;align-self:start}
+.application-aside .eyebrow{color:#61823c}
+.application-aside ul{margin:25px 0}
+.application-aside li{font-size:13px}
+.application-aside-note{border-top:1px solid #c8d9b6;padding-top:25px;font-size:13px;line-height:1.9;color:#385b2e}
+.application-honeypot{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden}
+@media(max-width:860px){.application-wrap{grid-template-columns:1fr}.application-aside{order:2}.application-price-grid{grid-template-columns:1fr}}
+@media(max-width:550px){.application-row{grid-template-columns:1fr}.application-form-card{padding:22px 18px}.application-wrap{gap:20px}.application-price-card{padding:24px}}
