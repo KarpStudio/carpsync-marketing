@@ -16,8 +16,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: "/next", destination: "https://app.carpsync.com/", permanent: true },
-      { source: "/next/:path*", destination: "https://app.carpsync.com/:path*", permanent: true },
+      { source: "/next", destination: "https://app.carpsync.com/next", permanent: true },
+      { source: "/next/:path*", destination: "https://app.carpsync.com/next/:path*", permanent: true },
     ];
   },
   async headers() {
