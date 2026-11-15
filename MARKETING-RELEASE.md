@@ -40,3 +40,7 @@ The marketing project is separate from `app.carpsync.com`. Legacy `/next` owner 
 Verified: disabled progression without an answer, multiple setup paths, visible enquiry context, preservation of typed requirements, removal of setup context, booking balances and hold states, and 320/390px layout widths.
 
 The privacy processing description was updated to explain local setup choices and messages sent through the visitor’s own email application. No new automatic message delivery or server storage is implied.
+
+## Pending: managed sign-up and published pricing
+
+The `feat/managed-fishery-signup-20261115` branch introduces a public `/apply` form and published pricing. The app’s `prebuild` command now regenerates all static marketing subpages and privacy legal copy to avoid stale pricing on Vercel. It is **not an approved production release** until the backend application-inbox/Stripe webhook branch, Prisma migration, mail settings and test payment are verified. The `/api/apply` endpoint fails closed when CARPSYNC_APPLICATION_API_URL is missing.
