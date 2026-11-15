@@ -13,19 +13,20 @@ export default function PrivacyPage() {
     <LegalPage
       eyebrow="Legal"
       title="Privacy Policy"
-      updated="16 September 2026"
+      updated="15 November 2026"
       sections={[
         {
           heading: "Who we are",
           body: [
-            "This website is operated by Karp Studio for CarpSync, online booking software for fisheries, carp lakes and angling venues. For privacy questions, contact hello@carpsync.com.",
+            "This website is operated by Karp Studio for CarpSync, online booking software for fisheries, carp lakes and angling venues. For privacy questions, contact reece@karpstudio.co.uk.",
             "This policy describes how we handle personal information collected through carpsync.com. It does not cover how fishery customers process angler data inside the CarpSync product.",
           ],
         },
         {
           heading: "Information we collect",
           body: [
-            "If you request a demo, we collect your name, email address, fishery or venue name, venue type and any message you choose to send.",
+            "If you send us an enquiry by email, we receive the name, email address, venue details, optional setup choices and message you include. The website form prepares the message in your own email application; it does not send it automatically.",
+            "The setup finder uses your booking, website and payment preferences in your browser to display an outline. Those choices are only included in an enquiry when you choose to add them; the setup finder does not save them to a server.",
             "We also receive technical information that is created automatically when you visit the site, such as IP address, browser type and pages requested, as part of hosting and security logs.",
           ],
         },
@@ -39,7 +40,7 @@ export default function PrivacyPage() {
         {
           heading: "Sharing",
           body: [
-            "Demo emails are sent using our email delivery provider so that your request reaches hello@carpsync.com. Hosting providers process technical data needed to serve the site.",
+            "If you choose to send an enquiry, your email application and email providers handle delivery. Our email providers process the messages we receive. Hosting providers process technical data needed to serve the website.",
             "We may disclose information if required by law.",
           ],
         },
@@ -52,13 +53,13 @@ export default function PrivacyPage() {
         {
           heading: "Your rights",
           body: [
-            "Depending on where you live, you may have rights to access, correct, delete or restrict the use of your personal information, and to object to certain processing. To exercise these rights, email hello@carpsync.com.",
+            "Depending on where you live, you may have rights to access, correct, delete or restrict the use of your personal information, and to object to certain processing. To exercise these rights, email reece@karpstudio.co.uk.",
           ],
         },
         {
           heading: "Contact",
           body: [
-            "Email hello@carpsync.com with any privacy questions about this marketing website.",
+            "Email reece@karpstudio.co.uk with any privacy questions about this marketing website.",
           ],
         },
       ]}

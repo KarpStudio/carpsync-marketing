@@ -9,7 +9,7 @@ The current marketing experience is served from `public/marketing/` using the `b
 - Browser interactions: `app.js`.
 - Supporting page content and shared layouts: `scripts/build-marketing-pages.mjs`.
 - Regenerate supporting pages with `node scripts/build-marketing-pages.mjs` after changing content or shared homepage navigation/footer.
-- Legal pages are generated from the existing `app/privacy`, `app/terms` and `app/cookies` source paragraphs. This release preserves their text.
+- Legal pages are generated from the existing `app/privacy`, `app/terms` and `app/cookies` source paragraphs. The privacy processing description reflects the browser-based setup finder and the email-app enquiry flow.
 
 ## Enquiries
 
@@ -24,7 +24,7 @@ Interfaces, customers and booking figures are clearly labelled illustrations. Th
 - Desktop, 320/390px phone layouts and 768/1024px tablet layout checks.
 - Product and venue tabs, selected owner navigation, extras totals and example confirmation.
 - Valid headings, unique IDs, local assets and section links across fourteen pages.
-- Original legal paragraphs preserved.
+- Policy structure retained; privacy processing descriptions match the enquiry and setup flow.
 - Enquiry draft construction and fallback reviewed. Automated cloud-browser policy does not permit launching an external mail application; no live email is sent by verification.
 - Vercel preview build and route checks before advancing the production branch.
 
@@ -38,3 +38,5 @@ The marketing project is separate from `app.carpsync.com`. Legacy `/next` owner 
 - Mobile result layouts hide repeated introductory text and use the existing fixed-header offset when scrolling between questions and results.
 
 Verified: disabled progression without an answer, multiple setup paths, visible enquiry context, preservation of typed requirements, removal of setup context, booking balances and hold states, and 320/390px layout widths.
+
+The privacy processing description was updated to explain local setup choices and messages sent through the visitor’s own email application. No new automatic message delivery or server storage is implied.
