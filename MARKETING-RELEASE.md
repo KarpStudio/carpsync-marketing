@@ -29,3 +29,12 @@ Interfaces, customers and booking figures are clearly labelled illustrations. Th
 - Vercel preview build and route checks before advancing the production branch.
 
 The marketing project is separate from `app.carpsync.com`. Legacy `/next` owner links redirect to the existing app.
+
+## Interactive marketing additions
+
+- The three-step setup finder uses venue, website and payment preferences to produce a starting outline. It does not quote a price, create an account or persist choices to a server.
+- Choosing to discuss the outline adds a visible, removable setup summary to the email enquiry. Existing typed requirements remain unchanged.
+- Sample booking calendar buttons open labelled details for full payments, partial payments and provisional holds. Their expanded state and close behaviour support keyboard navigation.
+- Mobile result layouts hide repeated introductory text and use the existing fixed-header offset when scrolling between questions and results.
+
+Verified: disabled progression without an answer, multiple setup paths, visible enquiry context, preservation of typed requirements, removal of setup context, booking balances and hold states, and 320/390px layout widths.
