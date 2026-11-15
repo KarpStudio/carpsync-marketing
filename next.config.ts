@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     return {
       beforeFiles: [
         { source: "/", destination: "/marketing/index.html" },
-        ...["product", "features", "pricing", "for-fisheries", "french-fisheries", "integrations", "resources", "about", "ecosystem", "demo", "privacy", "terms", "cookies"].map((slug) => ({
+        ...["product", "features", "pricing", "apply", "apply-success", "for-fisheries", "french-fisheries", "integrations", "resources", "about", "ecosystem", "demo", "privacy", "terms", "cookies"].map((slug) => ({
           source: `/${slug}`,
           destination: `/marketing/pages/${slug}.html`,
         })),
