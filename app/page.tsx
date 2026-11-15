@@ -24,15 +24,15 @@ export const metadata = pageMetadata({
 export default function HomePage() {
   return (
     <>
-      <div className="bg-[#07110d]">
+      <div className="bg-[#081B12] px-8 py-10 sm:py-14">
         <Image
-          src="/brand/carpsync-hero-banner.jpg"
-          alt="CarpSync — carp lake booking system"
-          width={1024}
-          height={341}
+          src="/brand/svg/carpsync-dark.svg"
+          alt="CarpSync"
+          width={1200}
+          height={285}
           priority
-          sizes="100vw"
-          className="h-auto w-full"
+          sizes="(max-width: 800px) 85vw, 740px"
+          className="mx-auto h-auto w-full max-w-[740px]"
         />
       </div>
       <Hero />
