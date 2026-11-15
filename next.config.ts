@@ -1,6 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Serve the approved standalone marketing homepage while preserving all
+  // existing legal, resource and demo routes in this Next.js project.
+  async rewrites() {
+    return {
+      beforeFiles: [{ source: "/", destination: "/marketing/index.html" }],
+    };
+  },
   async headers() {
     return [
       {
