@@ -1,6 +1,6 @@
 // Central configuration for editable URLs and top-level navigation.
 export const CARPSYNC_APP_URL =
-  process.env.NEXT_PUBLIC_CARPSYNC_APP_URL ?? "https://carpsync.com/next";
+  process.env.NEXT_PUBLIC_CARPSYNC_APP_URL ?? "https://app.carpsync.com/";
 
 export const DEMO_PATH = "/demo";
 export const CONTACT_EMAIL = "hello@carpsync.com";

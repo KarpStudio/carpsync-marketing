@@ -5,8 +5,20 @@ const nextConfig: NextConfig = {
   // existing legal, resource and demo routes in this Next.js project.
   async rewrites() {
     return {
-      beforeFiles: [{ source: "/", destination: "/marketing/index.html" }],
+      beforeFiles: [
+        { source: "/", destination: "/marketing/index.html" },
+        ...["product", "features", "pricing", "for-fisheries", "french-fisheries", "integrations", "resources", "about", "ecosystem", "demo", "privacy", "terms", "cookies"].map((slug) => ({
+          source: `/${slug}`,
+          destination: `/marketing/pages/${slug}.html`,
+        })),
+      ],
     };
+  },
+  async redirects() {
+    return [
+      { source: "/next", destination: "https://app.carpsync.com/", permanent: true },
+      { source: "/next/:path*", destination: "https://app.carpsync.com/:path*", permanent: true },
+    ];
   },
   async headers() {
     return [

@@ -1,9 +1,31 @@
-# CarpSync marketing release — 15 November 2026
+# CarpSync marketing website — 15 November 2026
 
-The approved new homepage is served from `public/marketing/index.html` by the root before-files rewrite in `next.config.ts`. It is a standalone static page; all existing Next.js routes, policies, sitemap, robots and demo functionality remain available.
+The current marketing experience is served from `public/marketing/` using the `beforeFiles` rewrites in `next.config.ts`. The homepage and thirteen supporting pages share the same assets, navigation, typography and footer.
 
-The approved homepage source is mirrored from the CarpSync marketing Site at commit `369743d70b5e50950ec3883fbe40fb40bfefb38c`. Local asset paths are prefixed with `/marketing/`, and canonical/social metadata use `https://www.carpsync.com/`.
+## Editing
 
-The product interfaces and booking figures are illustrative. The enquiry form prepares an email to Reece, with a copy fallback; it does not send automatically. Existing Resend demo request functionality remains at `/demo`.
+- Homepage: `public/marketing/index.html`.
+- Shared appearance: `style.css` plus the readable `refinement.css` overrides.
+- Browser interactions: `app.js`.
+- Supporting page content and shared layouts: `scripts/build-marketing-pages.mjs`.
+- Regenerate supporting pages with `node scripts/build-marketing-pages.mjs` after changing content or shared homepage navigation/footer.
+- Legal pages are generated from the existing `app/privacy`, `app/terms` and `app/cookies` source paragraphs. This release preserves their text.
 
-Verification before release: desktop and 320/390px mobile layouts, product and venue tabs, booking extras and confirmation, enquiry draft preparation, local asset/anchor checks, JavaScript syntax. Verify the root rewrite and existing policy routes on the Vercel deployment before assigning production domains.
+## Enquiries
+
+The form opens the visitor's email application with an enquiry to `reece@karpstudio.co.uk`. A visible draft and copy fallback remain available. The webpage does not send email automatically or imply that preparing a draft has delivered it. The previous demo page required an email service that is not configured for this Vercel project; `/demo` now uses the same explicit email-app flow as the homepage.
+
+## Product examples
+
+Interfaces, customers and booking figures are clearly labelled illustrations. The interactive extras demonstration uses a 30% example deposit, calculated in integer pence. It does not create bookings or take payment. Pricing is individually quoted; no unconfirmed rates or testimonials are published.
+
+## Release checks
+
+- Desktop, 320/390px phone layouts and 768/1024px tablet layout checks.
+- Product and venue tabs, selected owner navigation, extras totals and example confirmation.
+- Valid headings, unique IDs, local assets and section links across fourteen pages.
+- Original legal paragraphs preserved.
+- Enquiry draft construction and fallback reviewed. Automated cloud-browser policy does not permit launching an external mail application; no live email is sent by verification.
+- Vercel preview build and route checks before advancing the production branch.
+
+The marketing project is separate from `app.carpsync.com`. Legacy `/next` owner links redirect to the existing app.

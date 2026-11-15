@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://carpsync.com";
+export const SITE_URL = "https://www.carpsync.com";
 export const SITE_NAME = "CarpSync";
 
 export const DEFAULT_TITLE =

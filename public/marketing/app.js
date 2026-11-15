@@ -62,9 +62,10 @@ wireTabs('.venue-choice', tab => {
 
 const currency = amount => new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(amount / 100);
 function bookingTotals() {
+  if (!document.getElementById('extras-total')) return;
   let total = 12000;
   document.querySelectorAll('.extras input:checked').forEach(input => { total += Number(input.dataset.price) * 100; });
-  const deposit = Math.round(total / 3);
+  const deposit = Math.round(total * 0.3);
   document.getElementById('extras-total').textContent = currency(total);
   document.getElementById('deposit-total').textContent = currency(deposit);
   document.getElementById('balance-total').textContent = currency(total - deposit);
@@ -75,13 +76,13 @@ document.querySelectorAll('.extras input').forEach(input => input.addEventListen
 bookingTotals();
 const confirmation = document.getElementById('booking-confirmation');
 const bookingDemo = document.querySelector('.booking-demo');
-document.getElementById('demo-continue').addEventListener('click', () => {
+document.getElementById('demo-continue')?.addEventListener('click', () => {
   bookingDemo.hidden = true;
   confirmation.hidden = false;
   document.querySelector('.floating-note').hidden = true;
   document.getElementById('demo-reset').focus({ preventScroll: true });
 });
-document.getElementById('demo-reset').addEventListener('click', () => {
+document.getElementById('demo-reset')?.addEventListener('click', () => {
   bookingDemo.hidden = false;
   confirmation.hidden = true;
   document.querySelector('.floating-note').hidden = false;
@@ -106,7 +107,7 @@ document.addEventListener('keydown', event => { if (event.key === 'Escape' && !m
 window.matchMedia('(min-width: 761px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
 
 const enquiryForm = document.getElementById('enquiry-form');
-enquiryForm.addEventListener('submit', event => {
+enquiryForm?.addEventListener('submit', event => {
   event.preventDefault();
   if (!enquiryForm.reportValidity()) return;
   const data = new FormData(enquiryForm);
@@ -127,8 +128,9 @@ enquiryForm.addEventListener('submit', event => {
   document.getElementById('email-fallback').hidden = false;
   document.getElementById('email-open').focus({ preventScroll: true });
   document.getElementById('email-fallback').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'nearest' });
+  window.location.href = link;
 });
-document.getElementById('copy-enquiry').addEventListener('click', async () => {
+document.getElementById('copy-enquiry')?.addEventListener('click', async () => {
   const field = document.getElementById('enquiry-text');
   try {
     await navigator.clipboard.writeText(field.value);
@@ -137,4 +139,13 @@ document.getElementById('copy-enquiry').addEventListener('click', async () => {
     field.focus(); field.select();
     document.getElementById('copy-status').textContent = 'Select and copy the enquiry above, then paste it into your email app.';
   }
+});
+
+// A persistent, quiet navigation bar keeps the next step within reach.
+const siteHeader = document.querySelector('.header');
+function updateHeader() { siteHeader?.classList.toggle('scrolled', window.scrollY > 24); }
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
+document.addEventListener('click', event => {
+  if (!mobileNav.hidden && !siteHeader.contains(event.target)) closeMenu();
 });
