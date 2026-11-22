@@ -53,6 +53,7 @@ export const marketingPaths = [
   "/product",
   "/features",
   "/for-fisheries",
+  "/switch-fishery-booking",
   "/french-fisheries",
   "/pricing",
   "/resources",
