@@ -6,6 +6,7 @@ import { BookingJourney } from "@/components/home/booking-journey";
 import { AdminDashboardSection } from "@/components/home/admin-dashboard";
 import { UseCases } from "@/components/home/use-cases";
 import { WebsiteIntegration } from "@/components/home/website-integration";
+import { SwitchingSection } from "@/components/home/switching-section";
 import { PaymentsSection } from "@/components/home/payments-section";
 import { ExtrasSection } from "@/components/home/extras-section";
 import { AutomationSection } from "@/components/home/automation-section";
@@ -42,6 +43,7 @@ export default function HomePage() {
       <AdminDashboardSection />
       <UseCases />
       <WebsiteIntegration />
+      <SwitchingSection />
       <PaymentsSection />
       <ExtrasSection />
       <AutomationSection />

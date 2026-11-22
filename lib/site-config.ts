@@ -15,6 +15,7 @@ export const primaryNav: NavLink[] = [
   { label: "Features", href: "/features" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "For Fisheries", href: "/for-fisheries" },
+  { label: "Switch to CarpSync", href: "/switch-fishery-booking" },
   { label: "Pricing", href: "/pricing" },
   { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
@@ -29,6 +30,7 @@ export const footerNav = {
   ],
   solutions: [
     { label: "Fisheries", href: "/for-fisheries" },
+    { label: "Switch Your Bookings", href: "/switch-fishery-booking" },
     { label: "French Carp Lakes", href: "/french-fisheries" },
     { label: "Exclusive Hire Lakes", href: "/for-fisheries#hire-lakes" },
     { label: "Fishing Holidays", href: "/for-fisheries#holidays" },

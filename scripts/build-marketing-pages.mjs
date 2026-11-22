@@ -49,6 +49,35 @@ const pages={
  cards([['CarpSync','The booking platform for fisheries and carp lakes.',['Availability and session bookings','Deposits, balances and extras','Owner booking administration']],['Karp Studio','Website design and development for angling businesses.',['Venue websites and brand presentation','Customer-facing booking journeys','Practical development and ongoing project work']]])+
  section('Choose the scope you need',['If you already have a website, start by discussing the booking connection. If you want a complete refresh, explain that in your enquiry and we’ll outline the website and platform work clearly.','<a href="https://karpstudio.co.uk/" target="_blank" rel="noopener">Explore Karp Studio</a>.'])}
 };
+pages['switch-fishery-booking'] = {
+  title: 'Switch your fishery booking system',
+  eyebrow: 'Thinking about switching?',
+  heading: 'Keep your lake. Rethink the bookings.',
+  description: 'Keep your existing fishery website or rebuild it with Karp Studio. Review your current bookings, payment process and the move to CarpSync before changing anything.',
+  body:
+    section('Why look beyond a booking widget?',[
+      'CarpSync brings availability, booking rules, extras, payments and customer records into one dedicated fishery workspace. It is designed for the way fisheries actually take bookings, from day tickets and individual swims to exclusive lake hire and fixed-changeover French holidays.',
+      'Already have a website you like? You can discuss connecting CarpSync to that existing site. Need a better website too? <a href="https://karpstudio.co.uk/services/fishery-website-design">Karp Studio can quote for a new fishery website</a> as a separate project.'
+    ])+
+    cards([
+      ['Fisheries, not appointment calendars','Set bookings up around the water rather than trying to squeeze lakes and swims into generic slots.',['Individual swims and sessions','Exclusive whole-lake bookings','French holiday stays and changeover days']],
+      ['Payments linked to bookings','Keep deposits, outstanding balances and trip extras connected with the right reservation.',['Deposit and full-payment options','Balances and payment status','Bait, food and other venue extras']],
+      ['A website that stays yours','Discuss keeping the existing website while improving the bookings, or commission a redesign through Karp Studio.',['Website and platform scoped separately','One direct point of contact','Clear booking journey on mobile']],
+      ['Know the costs before you commit','No CarpSync commission on direct bookings. Subscription, setup and third-party payment-processing charges are separate and agreed in advance.',['Venue-specific quote','Discuss third-party fees','No invented savings or guaranteed results']]
+    ])+
+    section('A considered four-step changeover',[
+      '<strong>1. Review:</strong> Tell us which system you use, what anglers book and how your payments work.',
+      '<strong>2. Plan:</strong> Identify existing reservations, rules and customer information that need transferring or reconciling. Any transfer is subject to what your current provider makes available.',
+      '<strong>3. Check:</strong> Review the booking journey, owner dashboard and customer messages before accepting live bookings.',
+      '<strong>4. Switch:</strong> Agree when to direct anglers to CarpSync, avoiding two uncoordinated booking calendars.'
+    ])+
+    section('Answers before you move',[
+      '<strong>Can I keep my website?</strong> Often, yes. We review the integration before confirming the right approach.',
+      '<strong>Will you import all my old bookings automatically?</strong> Not without checking. We assess available exports and agree how to reconcile any bookings that cannot be migrated.',
+      '<strong>Are there booking commissions?</strong> CarpSync does not take a commission on direct platform bookings. Agreed subscription, setup and payment processor charges still apply. Marketplace services have separate terms.',
+      '<strong>What is the first step?</strong> <a href="/#enquire">Tell Reece about your current booking setup</a> and we will discuss the options.'
+    ])
+};
 await mkdir(path.join(base,'pages'),{recursive:true});
 function document(slug,title,content,description,contact=false){
  return `<!doctype html>\n<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c1711"><title>${esc(title)} | CarpSync</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="https://www.carpsync.com/${slug}"><meta property="og:title" content="${esc(title)} | CarpSync"><meta property="og:description" content="${esc(description)}"><meta property="og:type" content="website"><meta property="og:url" content="https://www.carpsync.com/${slug}"><meta property="og:image" content="https://www.carpsync.com/marketing/assets/lake-sunset.webp"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/marketing/favicon.svg" type="image/svg+xml"><link rel="preload" as="font" href="/marketing/assets/manrope.woff2" type="font/woff2" crossorigin><link rel="stylesheet" href="/marketing/style.css"><link rel="stylesheet" href="/marketing/refinement.css"><script defer src="/marketing/app.js"></script></head><body><a class="skip-link" href="#main">Skip to content</a>${header}<main id="main" class="${contact?'page-contact-main':'page-main'}">${content}</main>${footer}</body></html>\n`;

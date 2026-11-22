@@ -552,3 +552,25 @@ details>p { font-size:14px; color:#53654b; }
 .setup-finder,.enquiry-form{scroll-margin-top:18px}
 .setup-finder.is-complete>h3,.setup-finder.is-complete>.setup-intro{display:none}
 @media(max-width:760px){.detail-close{width:44px;height:44px}.setup-finder,.enquiry-form{scroll-margin-top:12px}}
+
+
+/* Fishery-switch campaign: intentionally isolated from booking-demo interactions. */
+.switch-offer{background:#11281b;color:#f6f8f0;padding:104px 0 112px;border-top:1px solid #bdf36a35}
+.switch-offer-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:clamp(28px,5vw,86px);align-items:center}
+.switch-offer-copy>.eyebrow{color:#bcf36b;margin-bottom:24px}
+.switch-offer-copy h2{font-size:clamp(37px,4.6vw,61px);letter-spacing:-2.8px;line-height:1.1}
+.switch-offer-copy h2 em{font-style:normal;color:#bcf36b}
+.switch-offer-copy>p:not(.eyebrow){max-width:620px;color:#d7e3d2;font-size:15px;line-height:1.9;margin-top:21px}
+.switch-offer-copy>p strong{color:#f6f8f0}
+.switch-offer-actions{display:flex;flex-wrap:wrap;gap:23px;align-items:center;margin-top:33px}
+.switch-offer-actions .text-link{color:#eff8e7;min-height:48px}
+.switch-offer-proof{background:#0b1b12;border:1px solid #e5f4de24;border-radius:18px;padding:34px 35px}
+.switch-offer-proof>.eyebrow{color:#bcf36b;margin-bottom:27px}
+.switch-offer-proof ul{list-style:none;padding:0;margin:0}
+.switch-offer-proof li{padding:17px 0 18px 29px;border-top:1px solid #e5f4de1f;position:relative}
+.switch-offer-proof li:before{content:"✓";position:absolute;top:18px;left:0;color:#bcf36b;font-size:15px;font-weight:800}
+.switch-offer-proof li strong{display:block;font-size:15px;line-height:1.5;color:#f8fcee}
+.switch-offer-proof li span{display:block;margin-top:5px;font-size:12px;line-height:1.8;color:#b5c9b3}
+.switch-offer-note{border-top:1px solid #e5f4de25;padding-top:19px;color:#abc0aa;font-size:11px;line-height:1.8}
+@media(max-width:980px){.switch-offer{padding:74px 0 83px}.switch-offer-grid{grid-template-columns:1fr;gap:38px}.switch-offer-proof{max-width:720px}.desktop-nav{gap:17px}}
+@media(max-width:760px){.switch-offer{padding:63px 0 73px}.switch-offer-copy h2{font-size:clamp(35px,9vw,50px);letter-spacing:-1.9px}.switch-offer-copy>p:not(.eyebrow){font-size:14px}.switch-offer-actions{align-items:stretch;gap:16px}.switch-offer-actions .button{width:100%;justify-content:space-between}.switch-offer-proof{padding:20px 21px}.switch-offer-proof li{padding-left:25px}.switch-offer-proof li strong{font-size:14px}}
